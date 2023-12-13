@@ -1,14 +1,13 @@
 package main
 
 import (
-	"log"
-
 	"github.com/spf13/viper"
+	"log"
 )
 
 // getConfig returns the configuration value for the given key
 func getConfig(key string) string {
-	return viper.Get(key).(string)
+	return viper.GetString(key)
 }
 
 // SetupEnv loads and reads the configuration file
